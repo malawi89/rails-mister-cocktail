@@ -1,10 +1,12 @@
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  // background-size: cover !important;
-  background-position: center;
-  color: white;
+  background-size: cover !important;
+  // background-position: center;
+  // color: white;
   position: relative;
+  background-image: url("https://cdn.liquor.com/wp-content/uploads/2016/07/14070101/aviation-720FB.jpg");
+  margin: 15px;
 }
 
 // .card-category {

@@ -1,21 +1,27 @@
-<div class="container">
 
-<h1>Welcome to Mr Cocktail</h1>
-<h2>Our Cocktails</h2>
-<ol>
-<% @cocktails.each do |cocktail| %>
-  <div class="card">
-    <div class="card-description">
-      <li><%= link_to cocktail.name, cocktail_path(cocktail)  %></li>
-    </div>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://onthegrid.city/imager/s3_amazonaws_com/onthegrid.city/assets/grid/sofia/center/the-cocktail-bar/The-Cocktail-Bar-03-1_958cc5e0ce9e8b61b7d8ceb036d1f79e.jpg');">
+
+  <h1>Welcome to Mr Cocktail</h1>
+
 </div>
-<% end %>
-</ol>
+
+<div class="container">
+  <h2>Our Cocktails</h2>
+
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-8 col-sm-4 offset-xs-2">
+        <div class="card">
+          <div class="card-description">
+            <%= link_to cocktail.name, cocktail_path(cocktail)  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
-<br>
-<%= cl_image_tag("hv1t1eghayv3s4go5em3",
-      width: 400, height: 300, crop: :fill, radius: "15", :effect=>"tint:equalize:80:red:50p:blue:60p:yellow:40p") %>
+  <%= link_to "Add a cocktail", new_cocktail_path, :class => "btn-treehouse"%>
 
 </div>
