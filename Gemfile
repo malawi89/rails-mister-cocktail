@@ -12,6 +12,8 @@ gem 'bootstrap-sass' # Bootstrap v3
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'jquery-rails'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
