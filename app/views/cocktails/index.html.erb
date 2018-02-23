@@ -1,9 +1,16 @@
-<h1>Our Cocktails</h1>
-<ul>
+<div class="container">
+
+<h1>Welcome to Mr Cocktail</h1>
+<h2>Our Cocktails</h2>
+<ol>
 <% @cocktails.each do |cocktail| %>
-<li><%= link_to cocktail.name, cocktail_path(cocktail)  %></li>
+  <div class="card">
+    <div class="card-description">
+      <li><%= link_to cocktail.name, cocktail_path(cocktail)  %></li>
+    </div>
+</div>
 <% end %>
-</ul>
+</ol>
 
 
 <%= link_to "Add a cocktail", new_cocktail_path %>
@@ -11,3 +18,4 @@
 <%= cl_image_tag("hv1t1eghayv3s4go5em3",
       width: 400, height: 300, crop: :fill, radius: "15", :effect=>"tint:equalize:80:red:50p:blue:60p:yellow:40p") %>
 
+</div>
